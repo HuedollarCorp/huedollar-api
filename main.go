@@ -11,7 +11,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	port := os.GetEnv("PORT")
+	port := os.Getenv("PORT")
 	http.HandleFunc("/", hello)
 	http.ListenAndServe(":"+port, nil)
 }
